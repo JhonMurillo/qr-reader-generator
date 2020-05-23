@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Suspense } from 'react';
 import './App.css';
+import { Router } from '@reach/router';
 
-function App() {
+import { Generator } from '../src/pages/Generator';
+import { Reader } from '../src/pages/Reader';
+
+import { Header } from '../src/components/Header';
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<div />}>
+      <Header />
+      <Router>
+        <Generator path="/" />
+        <Generator path="/generar" />
+        <Reader path="/leer" />
+      </Router>
+    </Suspense>
   );
-}
-
-export default App;
+};
