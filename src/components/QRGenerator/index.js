@@ -22,6 +22,7 @@ const QRGenerator = ({ size = 512 }) => {
         <Row>
           <Col sm="12" md={{ size: 6, offset: 3 }}>
             <QRCode
+              className="img-fluid"
               value={value}
               size={size}
               fgColor="#4e2318"
