@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import './App.css';
 import { Router } from '@reach/router';
 
@@ -9,13 +9,13 @@ import { Header } from '../src/components/Header';
 
 export const App = () => {
   return (
-    <Suspense fallback={<div />}>
+    <>
       <Header />
       <Router>
         <Generator path="/" />
         <Generator path="/generar" />
         <Reader path="/leer" />
       </Router>
-    </Suspense>
+    </>
   );
 };
