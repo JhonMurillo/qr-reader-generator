@@ -20,6 +20,7 @@ const QRReader = ({ delay = 250 }) => {
   };
 
   const handleLoad = (object) => {
+    console.log(JSON.stringify(object));
     setScanning(true);
     setCamera(object ? object.streamLabel : '');
   };
