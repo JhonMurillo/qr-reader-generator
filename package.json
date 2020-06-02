@@ -39,14 +39,10 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "defaults"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "defaults"
     ],
     "reactSnap": {
       "cacheAjaxRequests": true,
@@ -56,9 +52,6 @@
         "--no-sandbox",
         "--disable-setuid-sandbox"
       ]
-    },
-    "browserslist": [
-      "defaults"
-    ]
+    }
   }
 }
